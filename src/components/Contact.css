@@ -1,0 +1,119 @@
+/* ─── Contact Section ─────────────────────────────────────────── */
+.contact {
+  background: var(--bg-secondary);
+}
+
+.contact__actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  max-width: 700px;
+  margin: 0 auto var(--space-3xl);
+}
+
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-md);
+  padding: var(--space-2xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.contact__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-card-hover);
+  color: var(--text-primary);
+}
+
+.contact__card-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--accent-glow);
+  color: var(--accent);
+  font-size: var(--font-size-2xl);
+  transition: all var(--transition-base);
+}
+
+.contact__card:hover .contact__card-icon {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.contact__card-icon--whatsapp {
+  background: rgba(37, 211, 102, 0.1);
+  color: #25d366;
+}
+
+.contact__card:hover .contact__card-icon--whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.contact__card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.contact__card-detail {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.contact__card-cta {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--accent);
+  transition: all var(--transition-fast);
+}
+
+.contact__card:hover .contact__card-cta {
+  letter-spacing: 0.05em;
+}
+
+/* Social Links */
+.contact__socials {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+.contact__social-link {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xl);
+  transition: all var(--transition-base);
+}
+
+.contact__social-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+/* ─── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .contact__actions {
+    grid-template-columns: 1fr;
+  }
+}

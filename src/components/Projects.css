@@ -1,0 +1,103 @@
+/* ─── Projects Section ────────────────────────────────────────── */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.projects__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  height: 100%;
+}
+
+.projects__card:hover {
+  border-color: var(--accent);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Card Header */
+.projects__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+}
+
+.projects__card-folder {
+  color: var(--accent);
+}
+
+.projects__card-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.projects__card-link {
+  color: var(--text-secondary);
+  font-size: var(--font-size-xl);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.projects__card-link:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Card Body */
+.projects__card-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  transition: color var(--transition-fast);
+}
+
+.projects__card:hover .projects__card-title {
+  color: var(--accent);
+}
+
+.projects__card-description {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: var(--space-xl);
+}
+
+/* Tech Stack Tags */
+.projects__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: auto;
+}
+
+.projects__card-tag {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--accent);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0.02em;
+}
+
+.projects__card-tag::before {
+  content: '#';
+  opacity: 0.5;
+}
+
+/* ─── Tablet ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
