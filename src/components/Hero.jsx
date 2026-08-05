@@ -113,17 +113,6 @@ const Hero = () => {
                   <span>{personalInfo.name.split(' ').map(n => n[0]).join('')}</span>
                 </div>
               )}
-
-              {/* Sliding name badge (appears on hover) */}
-              <motion.div
-                className="hero__name-badge"
-                variants={badgeVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                <span className="hero__name-badge-name">{personalInfo.name}</span>
-                <span className="hero__name-badge-title">{personalInfo.title}</span>
-              </motion.div>
             </div>
           </motion.div>
         </div>
